@@ -136,15 +136,8 @@ install_dotfiles () {
   done
 }
 
-install_git_things () {
-    git clone https://github.com/gmarik/Vundle.vim.git ../vim/vim.symlink/bundle/Vundle.vim
-    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh-plugins/zsh-syntax-highlighting
-
-}
-
 setup_gitconfig
 install_dotfiles
-install_git_things
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
