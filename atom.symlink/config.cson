@@ -1,35 +1,61 @@
-'editor':
-  'showIndentGuide': true
-  'fontFamily': 'Menlo'
-  'fontSize': 15
-'core':
-  'excludeVcsIgnoredPaths': true
-  'ignoredNames': [
-    '.bundle'
-    '.git'
-    'log'
-    'repositories'
-    'tmp'
-    'vendor'
-  ]
-  'themes': [
-    'unity-ui'
-    'glacier-syntax'
-  ]
-  'hideGitIgnoredFiles': true
-  'disabledPackages': [
-    'background-tips'
-    'exception-reporting'
-    'metrics'
-  ]
-'spell-check':
-  'grammars': [
-    'text.plain'
-    'source.gfm'
-    'text.git-commit'
-  ]
+'exception-reporting':
+  'userId': '351458e1-d138-3f08-36da-f6f53487fc68'
+'release-notes':
+  'viewedVersion': '0.95.0'
 'welcome':
   'showOnStartup': false
-'release-notes':
-  'viewedVersion': '0.89.0'
+'metrics':
+  'userId': '0'
+'editor':
+  'fontFamily': 'Hasklig'
+  'preferredLineLength': 79
+  'showIndentGuide': true
+  'tabLength': 4
+  'fontSize': 10
+'core':
+  'themes': [
+    'proton'
+    'proton-monokai'
+  ]
+  'disabledPackages': [
+    'metrics'
+    'runcoderun'
+    'autocomplete-plus'
+    'minimap'
+    'linter-pyflakes'
+    'autocomplete'
+  ]
+  'useReactEditor': true
+'pep8':
+  'PEP8Path': '/usr/local/bin/pep8'
+  'ignoreErrors': []
+'flake8':
+  'path': '/usr/local/bin/flake8'
+'autocomplete':
+  'includeCompletionsFromAllBuffers': true
+'autocomplete-plus': {}
+'runner':
+  'scopes':
+    'coffee': 'coffee'
+    'js': 'node'
+    'ruby': 'ruby'
+    'python': 'python'
+    'go': 'go run'
+    'perl': 'perl'
+  'extensions':
+    'spec.coffee': 'jasmine-node --coffee'
+'term2':
+  'colors':
+    'brightBlue': '#66D9EF'
+    'brightPurple': '#AE81FF'
+    'brightGreen': '#A6E22E'
+    'brightRed': '#F92672'
+    'normalGreen': '#A6E22E'
+    'normalYellow': '#FD971F'
+    'brightYellow': '#E6DB74'
+    'normalCyan': '#66D9EF'
+    'normalRed': '#F92672'
+    'normalPurple': '#AE81FF'
+'minimap':
+  'autoToggle': true
 'tree-view': {}
