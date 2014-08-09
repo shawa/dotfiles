@@ -1,0 +1,5 @@
+#!/bin/zsh
+ 
+curl -s 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=shawa_a&api_key=3e54e92272ca5a0d0767f3dbb916eaff&format=json' \
+    | tr -d '#' \
+    | jq -r '.recenttracks.track[0] | "\(.name) - \(.artist.text)"'
