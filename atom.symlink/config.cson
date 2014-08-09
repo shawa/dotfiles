@@ -11,7 +11,7 @@
   'preferredLineLength': 79
   'showIndentGuide': true
   'tabLength': 4
-  'fontSize': 10
+  'fontSize': 14
 'core':
   'themes': [
     'proton'
