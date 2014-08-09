@@ -1,3 +1,10 @@
 #manual hackery
+<<<<<<< HEAD
 git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+=======
+# set up Vundle
+git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim 
+vim +PluginInstall +qall
+
+>>>>>>> 7134af4de811bf330d4ab19a29a9d7e630dba7e7
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh-plugins/zsh-syntax-highlighting
