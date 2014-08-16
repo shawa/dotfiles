@@ -7,5 +7,6 @@ atom.symlink/themes
 atom.symlink/icon
 
 vim/vim.symlink/bundle
+vim/vim.symlink/.netrwhist 
 
 git/gitconfig.symlink
