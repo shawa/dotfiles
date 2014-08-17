@@ -47,7 +47,16 @@ need_push () {
 }
 
 user_name() {
-  echo "%{$fg_bold[magenta]%}%n%{$reset_color%}@%{$fg_bold[cyan]%}%M%{$reset_color%}"
+  local usercolor=''
+  local hostcolor='cyan' 
+  if [[ "$(whoami)" == 'root' ]]
+  then 
+    usercolor='red'
+    hostcolor='red'
+  else
+    usercolor='green'
+  fi
+    echo "%{$fg_bold[$usercolor]%}%n%{$reset_color%}@%{$fg_bold[$hostcolor]%}%M%{$reset_color%}"
 }
 
 directory_name() {
