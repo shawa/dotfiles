@@ -11,6 +11,7 @@
   'preferredLineLength': 79
   'showIndentGuide': true
   'tabLength': 4
+  'softWrap': true
   'fontSize': 14
 'core':
   'themes': [

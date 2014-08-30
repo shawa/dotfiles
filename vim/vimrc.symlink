@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Terryma/vim-multiple-cursors'
 Bundle 'yonchu/accelerated-smooth-scroll'
 Bundle 'jistr/vim-nerdtree-tabs'
 
