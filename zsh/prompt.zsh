@@ -63,9 +63,9 @@ directory_name() {
   echo "%{$fg_bold[white]%}%~ %{$reset_color%}"
 }
 
-export PROMPT=$'\n$(user_name) $(directory_name)$(git_dirty)$(need_push)\n› '
 
 set_prompt () {
+    export PROMPT=$'\n$(user_name) $(directory_name)$(git_dirty)$(need_push)\n› '
     export RPROMPT="%{$fg_bold[gray]%}$(date '+%H:%M')%{$reset_color%}"
 }
 
