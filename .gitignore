@@ -8,5 +8,6 @@ atom.symlink/icon
 
 vim/vim.symlink/bundle
 vim/vim.symlink/.netrwhist
+vim/vim.symlink/vimfiles/syntax/*.vim
 
 git/gitconfig.symlink
