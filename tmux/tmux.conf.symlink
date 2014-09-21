@@ -151,7 +151,6 @@ setw -g window-status-fg black
 setw -g window-status-attr reverse
 setw -g window-status-content-bg colour0
 setw -g window-status-content-fg colour11
-setw -g window-status-content-attr bold,blink,reverse
 
 
 

@@ -8,8 +8,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Terryma/vim-multiple-cursors'
-Bundle 'yonchu/accelerated-smooth-scroll'
-Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'godlygeek/tabular'
+
 
 set laststatus=2
 call vundle#end()            " required
@@ -20,6 +20,8 @@ set nu
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set backspace=indent,eol,start
+
 
 colorscheme molokai
 
@@ -30,7 +32,7 @@ map <leader>] :tabnext<CR>
 map <leader>- :tabc<CR>
 map <leader>= :tabnew<CR>
 map <leader>R :source ~/.vimrc<CR>
-
+map <leader>t :Tab /\|<cr>
 map <leader>w :w<cr>
 map <leader>q :q<cr>
 map <leader>wq :wq<cr>
@@ -38,7 +40,8 @@ map <leader>Q :q!<cr>
 
 map <leader>" :NERDTreeTabsToggle<CR>
 map <leader>' :NERDTreeFocusToggle<CR>
+nnoremap <space> zz
 
 nnoremap <leader>r :!%:p <ENTER>
-:noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
+noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
 
