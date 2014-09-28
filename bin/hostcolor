@@ -1,0 +1,16 @@
+#!/bin/bash
+hostname | sha1sum | awk -f <(sed -e '0,/^#!.*awk/d' $0)
+exit $PIPESTATUS
+
+#!/usr/bin/awk -f
+BEGIN {
+    colors[0] = "red"
+    colors[1] = "green"
+	colors[2] = "blue"
+	colors[3] = "cyan"
+	colors[4] = "yellow"
+	colors[5] = "magenta"
+}
+{
+	print colors[$1 % 5]
+}

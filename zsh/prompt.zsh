@@ -46,17 +46,17 @@ need_push () {
   fi
 }
 
+host_color="$(hostcolor)"
 user_name() {
   local usercolor=''
-  local hostcolor='cyan' 
-  if [[ "$(whoami)" == 'root' ]]
+  if [[ "$(/usr/bin/whoami)" == 'root' ]]
   then 
     usercolor='red'
     hostcolor='red'
   else
     usercolor='green'
   fi
-    echo "%{$fg_bold[$usercolor]%}%n%{$reset_color%}@%{$fg_bold[$hostcolor]%}%M%{$reset_color%}"
+    echo "%{$fg_bold[$usercolor]%}%n%{$reset_color%}@%{$fg_bold[$host_color]%}%M%{$reset_color%}"
 }
 
 directory_name() {

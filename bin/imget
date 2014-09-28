@@ -1,0 +1,21 @@
+#!/bin/bash
+readonly IMGDIR='../img'
+
+if [ ! -d $IMGDIR ]; then
+	echo "$IMGDIR not found. Stop."
+	exit 1
+fi
+
+read -rp ' url: ' url
+read -rp 'name: ' name
+read -rp 'text: ' text
+
+rawname="$(basename "$url")"
+extension="$(echo ${rawname##*.} | tr '[:upper:]' '[:lower:]')"
+filename="$IMGDIR/$name.$extension"
+
+curl -s "$url" > "$filename"
+
+echo $filename
+
+echo -e "![$text]($filename)  \n\n> $url" | pbcopy

@@ -19,22 +19,21 @@ main(){
 	local keep=$1; shift
 
 	local base="$(basename $filename .md)"
-	local hash="$(echo "$(gdate +%s%N) $base" | gsha1sum | cut -c -8)"	
-	local outfile="$hash-$base.html"
+#local hash="$(echo "$(gdate +%s%N) $base" | gsha1sum | cut -c -8)"	
+#	local hash="$(echo "$base" | gsha1sum | cut -c -8)"	
+	local outfile="$base.html"
 	
-	pandoc "$filename"  \
-		-o "$outfile"   \
-		-c "$STYLESHEET"\
-		--mathjax
-	
-	open "$outfile"
+		pandoc "$filename"  \
+			-o "$outfile"   \
+			-c "$STYLESHEET"\
+			--mathjax
+		
+		open "$outfile"
 
-	if [ "$keep" = '' ]; then
-		read -p "rm $outfile, press any key..." -n 1 -s
-		rm "$outfile"
-		echo
-	fi
-
+#		if [ "$keep" = '' ]; then
+#			read -p "Refresh $outfile with any key" -n 1 -s
+#			echo
+#		fi
 }
 
 main $*

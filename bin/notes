@@ -1,0 +1,43 @@
+#!/bin/bash
+
+readonly notes_folder="/$HOME/Google Drive/SF/modules"
+cd "$notes_folder"
+
+cat <<- EOF > index.md
+	## Modules
+
+EOF
+
+add_entry(){
+cat <<- EOF >> index.md
+
+## [$code: $title]($dir/notes/index.html)
+> $instructor [$email](mailto:$email)  
+> [$homepage]($homepage)  
+> $room
+
+EOF
+}
+
+for dir in $(ls); do
+	if [ -d $dir ]; then
+	
+		cd $dir/notes
+		notecomp
+		cd ../..
+
+		infofile="$dir/module.json"
+		title="$(jq -r '.module.title' < $infofile)"	
+		code="$(jq -r '.module.code' < $infofile)"	
+		homepage="$(jq -r '.module.homepage' < $infofile)"	
+
+		instructor="$(jq -r '.instructor.name' < $infofile)"	
+		email="$(jq -r '.instructor.email' < $infofile)"	
+		room="$(jq -r '.instructor.room' < $infofile)"	
+		
+		add_entry
+
+	fi
+done
+
+mdp index.md

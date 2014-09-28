@@ -1,0 +1,33 @@
+#!/bin/bash
+#Generate folder and JSON blob for given module
+
+
+read -rp ' Module title: ' module_title
+read -rp '  Module Code: ' module_code
+read -rp '     Homepage: ' homepage
+read -rp '   Instructor: ' instructor_name
+read -rp '        Email: ' email
+read -rp '         Room: ' room
+
+directory="$(echo "$module_title" | tr ' [:upper:]' '_[:lower:]')_$module_code"
+
+for subdir in img notes slides misc; do
+	mkdir -p  "$directory/$subdir"
+done
+
+cat <<- EOF > "$directory/module.json"
+{
+    "module" : {
+        "title" : "$module_title",
+        "code" : "$module_code",
+        "homepage" : "$homepage"
+    },
+    "instructor" : {
+        "name" : "$instructor_name",
+        "email" : "$email",
+        "room" : "$room"
+    }
+}
+EOF
+
+jq . < "$directory/module.json"

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+readonly STYLESHEET="$HOME/.pandoc/github.css"
+
+pandoc -o ./index.html \
+    --mathjax --toc -c "$STYLESHEET" \
+    *.md
+
+pandoc -o ../course.pdf \
+    --toc \
+    ./*.md
+
