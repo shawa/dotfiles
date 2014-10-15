@@ -4,9 +4,9 @@ readonly STYLESHEET="$HOME/.pandoc/github.css"
 
 pandoc -o ./index.html \
     --mathjax --toc -c "$STYLESHEET" \
-    *.md
+    *.md metadata.yaml &
 
 pandoc -o ../course.pdf \
-    --toc \
-    ./*.md
+    --toc --latex-engine=xelatex\
+    ./*.md metadata.yaml &
 

@@ -12,8 +12,8 @@ fi
 date="$(date '+%Y-%m-%d, %H:%M')"
 
 read -p  'Location: ' location
-read -rp 'Topic: ' topic
 read -p  'Lecture Number: ' number
+read -rp 'Topic: ' topic
 
 note_file="./$(echo "$number")_$(echo "$topic" | tr ' [:upper:]' '_[:lower:]').md"
 

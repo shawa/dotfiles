@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly notes_folder="/$HOME/Google Drive/SF/modules"
+readonly notes_folder="/$HOME/Google_Drive/SF/modules"
 cd "$notes_folder"
 
 cat <<- EOF > index.md
@@ -16,6 +16,8 @@ cat <<- EOF >> index.md
 > [$homepage]($homepage)  
 > $room
 
+[PDF]($dir/course.pdf)  
+
 EOF
 }
 
@@ -23,7 +25,7 @@ for dir in $(ls); do
 	if [ -d $dir ]; then
 	
 		cd $dir/notes
-		notecomp
+		notecomp &
 		cd ../..
 
 		infofile="$dir/module.json"

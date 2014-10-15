@@ -3,12 +3,22 @@ filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
+Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'sukima/xmledit'
+Plugin 'scrooloose/syntastic'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Chiel92/vim-autoformat'
+"Plugin 'vim-scripts/AutoComplPop'
 
 
 set laststatus=2
@@ -22,8 +32,28 @@ set shiftwidth=4
 set expandtab
 set backspace=indent,eol,start
 
-
 colorscheme molokai
+
+"Functions
+function! Auto_complete_string()
+    if pumvisible()
+        return "\<C-n>"
+    else
+        return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
+    end
+endfunction
+
+function! Auto_complete_opened()
+    if pumvisible()
+        return "\<Down>"
+    end
+    return ""
+endfunction
+
+
+"Plugin prefs
+
+let g:better_whitespace_filetypes_blacklist=['markdown']
 
 
 "Bindings
@@ -32,16 +62,19 @@ map <leader>] :tabnext<CR>
 map <leader>- :tabc<CR>
 map <leader>= :tabnew<CR>
 map <leader>R :source ~/.vimrc<CR>
-map <leader>t :Tab /\|<cr>
 map <leader>w :w<cr>
 map <leader>q :q<cr>
 map <leader>wq :wq<cr>
 map <leader>Q :q!<cr>
 
+map <leader><space> :StripWhitespace<CR>
+
 map <leader>" :NERDTreeTabsToggle<CR>
 map <leader>' :NERDTreeFocusToggle<CR>
-nnoremap <space> zz
 
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'.synIDattr(synID(line("."),col("."),0),"name") . "> lo<".synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+nnoremap <space> zz
 nnoremap <leader>r :!%:p <ENTER>
 noremap <silent> <Leader>vs :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
 
