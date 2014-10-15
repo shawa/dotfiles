@@ -1,0 +1,6 @@
+\documentclass{book}
+\input{macros}
+
+\title{The Great American Novel}
+\author{Alex Nelson}
+\date{\today}

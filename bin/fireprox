@@ -1,0 +1,3 @@
+#!/bin/sh
+ssh -vND 5000 spoon&
+open -a Firefox

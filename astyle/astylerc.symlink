@@ -1,0 +1,5 @@
+#C style for astyle formatting
+
+--style=linux
+--indent=tab
+--indent-switches
