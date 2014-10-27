@@ -1,2 +1,17 @@
+Bundle 'vim-scripts/SingleCompile'
+Bundle 'yonchu/accelerated-smooth-scroll'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+
 Plugin 'Lokaltog/vim-powerline'
-Bundle 'yonchu/accelerated-smooth-scroll'    
+Plugin 'scrooloose/nerdtree'
+Plugin 'Terryma/vim-multiple-cursors'
+Plugin 'godlygeek/tabular'
+Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'sukima/xmledit'
+Plugin 'scrooloose/syntastic'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Chiel92/vim-autoformat'
+

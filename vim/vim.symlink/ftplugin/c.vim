@@ -9,5 +9,5 @@ set cole=0
 set concealcursor=nvic
 
 map <leader>t :Tab /=<cr>
-
+map <leader>r :SCCompileRun<cr>
 autocmd BufWritePre <buffer> StripWhitespace
