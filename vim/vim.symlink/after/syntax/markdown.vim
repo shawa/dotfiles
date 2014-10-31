@@ -78,6 +78,9 @@ syn match texMathSymbol '\\land\>' contained conceal cchar=∧
 syn match texMathSymbol '\\lor\>' contained conceal cchar=∨
 syn match texMathSymbol '\\implies\>' contained conceal cchar=⇒
 syn match texMathSymbol '\\iff\>' contained conceal cchar=⇔
+syn match texMathSymbol '\\lnot\>' contained conceal cchar=¬
+syn match texMathSymbol '\\not\>' contained conceal cchar=/
+syn match texMathSymbol '\\neq\>' contained conceal cchar=≠
 
 "Latex Conceals
 syn match texMathSymbol '\\overbracket\>' contained conceal cchar=⎴

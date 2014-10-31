@@ -1,5 +1,4 @@
 Bundle 'vim-scripts/SingleCompile'
-Bundle 'yonchu/accelerated-smooth-scroll'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 
@@ -14,4 +13,7 @@ Plugin 'sukima/xmledit'
 Plugin 'scrooloose/syntastic'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Chiel92/vim-autoformat'
-
+Plugin 'vim-scripts/RltvNmbr.vim'
+Plugin 'atweiden/vim-betterdigraphs'
+Plugin 'atweiden/vim-dragvisuals'
+Plugin 'mhinz/vim-startify'
