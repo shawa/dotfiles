@@ -1,4 +1,5 @@
 syn region String oneline matchgroup=Delimiter start="\$" end="\$" contains=texMathSymbol
+syn region String oneline matchgroup=Delimiter start="\$\$" end="\$\$" contains=texMathSymbol
 syn region Statement matchgroup=Delimiter start="\\begin{.*}" end="\\end{.*}" contains=Statement
 syn region Statement matchgroup=Delimiter start="{" end="}" contains=Statement
 
@@ -81,6 +82,8 @@ syn match texMathSymbol '\\iff\>' contained conceal cchar=⇔
 syn match texMathSymbol '\\lnot\>' contained conceal cchar=¬
 syn match texMathSymbol '\\not\>' contained conceal cchar=/
 syn match texMathSymbol '\\neq\>' contained conceal cchar=≠
+syn match texMathSymbol '\\mod\>' contained conceal cchar=%
+
 
 "Latex Conceals
 syn match texMathSymbol '\\overbracket\>' contained conceal cchar=⎴

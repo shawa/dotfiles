@@ -25,7 +25,8 @@ main(){
 
 	(pandoc "$filename"  \
 		-o "$outfile"   \
-		-c "$STYLESHEET"\
+		-c "$STYLESHEET" \
+		--number-sections \
 		--latex-engine=xelatex \
 			&& open "$outfile" \
 			&& open -a 'Terminal')&

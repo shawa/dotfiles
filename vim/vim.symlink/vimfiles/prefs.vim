@@ -19,6 +19,7 @@ set backup
 set backupdir=~/.vim_backup
 set viminfo=%100,'100,/100,h,\"500,:100,n~/.viminfo
 
+set ttimeoutlen=0 "remove delay after exiting insert mode
 
 set listchars=tab:▸\ ,eol:¬
 set scrolloff=3
@@ -27,7 +28,6 @@ set laststatus=2
 set shell=zsh
 set noerrorbells
 set ttyfast
-set lazyredraw
 set more
 set showcmd
 set wildmode=longest:full
