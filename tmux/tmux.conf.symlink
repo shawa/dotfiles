@@ -6,7 +6,7 @@ if-shell 'test "$(uname)" = "Darwin"' 'set-option -g default-command "reattach-t
 
 # use UTF8
 # make tmux display things in 256 colors
-#set -g default-terminal "screen-256color"
+set -g default-terminal "screen-256color"
 
 # set scrollback history to 10000 (10k)
 set -g history-limit 10000
