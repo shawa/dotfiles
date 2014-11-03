@@ -1,17 +1,25 @@
 let mapleader = "\<space>"
-map <leader>[ :tabp<cr>
-map <leader>] :tabnext<cr>
-map <leader>- :tabc<cr>
-map <leader>= :tabnew<cr>
-map <leader>R :source ~/.vimrc<cr>
-map <leader>w :w<cr>
-map <leader>q :q<cr>
-map <leader>wq :wq<cr>
-map <leader>Q :q!<cr>
-map <leader><space> :StripWhitespace<cr>
-map <leader>" :NERDTreeTabsToggle<cr>
-map <leader>' :NERDTreeFocusToggle<cr>
 
+"buffer stuffer
+map <leader>[ :bp<cr>
+map <leader>] :bn<cr>
+map <leader>- :bd<cr>
+map <leader>= :ls<cr>
+map <leader>e :e
+
+"utility stuff
+nmap <leader>R :source ~/.vimrc<cr>
+nmap <leader>w :w<cr>
+nmap <leader>W :w!<cr>
+nmap <leader>q :q<cr>
+nmap <leader>Q :q!<cr>
+nmap <leader>wq :wq<cr>
+nmap <leader>WQ :wq!<cr>
+
+nmap <leader>pp :set paste!<cr>
+nmap <leader>ll :set list!<cr>
+
+map <leader><space> :StripWhitespace<cr>
 map <leader>n :RltvNmbr<cr>
 map <leader>N :RltvNmbr!<cr>
 
@@ -22,10 +30,13 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-nmap <leader>pp :set paste!<cr>
-nmap <leader>ll :set list!<cr>
-
 nnoremap ,, :noh<cr>
+
+"window management
+map <Leader>\| :vsplit<cr>
+map <leader>{ :vertical resize -5<cr>
+map <leader>} :vertical resize +5<cr>
+
 
 "breaking bad habits
 noremap <Up> <NOP>

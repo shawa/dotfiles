@@ -29,7 +29,7 @@ main(){
 		--number-sections \
 		--latex-engine=xelatex \
 			&& open "$outfile" \
-			&& open -a 'Terminal')&
+			&& open -a 'iTerm')&
 
 #		if [ "$keep" = '' ]; then
 #			read -p "Refresh $outfile with any key" -n 1 -s

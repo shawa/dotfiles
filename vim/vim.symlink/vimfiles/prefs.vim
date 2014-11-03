@@ -32,6 +32,8 @@ set more
 set showcmd
 set wildmode=longest:full
 set wildmenu
+set cursorcolumn
+set cursorline
 
 "Write buffer when window loses focus
 au FocusLost * :wa
