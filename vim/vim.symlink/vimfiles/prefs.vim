@@ -32,13 +32,15 @@ set more
 set showcmd
 set wildmode=longest:full
 set wildmenu
-set cursorcolumn
 set cursorline
 
 "Write buffer when window loses focus
 au FocusLost * :wa
 
 syntax on
-colorscheme molokai
+
+"how long can he keep this up?
+colorscheme monochrome
 
 let g:better_whitespace_filetypes_blacklist=['markdown']
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'

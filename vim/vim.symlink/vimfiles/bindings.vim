@@ -4,6 +4,7 @@ let mapleader = "\<space>"
 map <leader>[ :bp<cr>
 map <leader>] :bn<cr>
 map <leader>- :bd<cr>
+map <leader>_ :%bd<cr>
 map <leader>= :ls<cr>
 map <leader>e :e
 
