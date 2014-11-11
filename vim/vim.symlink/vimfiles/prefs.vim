@@ -40,7 +40,7 @@ au FocusLost * :wa
 syntax on
 
 "how long can he keep this up?
-colorscheme monochrome
+colorscheme molokai
 
 let g:better_whitespace_filetypes_blacklist=['markdown']
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
