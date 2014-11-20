@@ -44,3 +44,11 @@ colorscheme molokai
 
 let g:better_whitespace_filetypes_blacklist=['markdown']
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+let g:ycm_confirm_extra_conf = 0
+
+let g:ycm_filetype_blacklist = {
+      \ 'markdown' : 1,
+      \ 'text' : 1,
+      \ 'pandoc' : 1,
+      \ 'vim' : 1,
+      \}

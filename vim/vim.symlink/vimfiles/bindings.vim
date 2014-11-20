@@ -16,8 +16,16 @@ nmap <leader>_ :tabc<cr>
 
 "wind-oh!
 map <leader>\| :vsplit<cr>
+map <leader>\\ :split<cr>
 map <leader>H :vertical resize -5<cr>
+map <leader>J :resize +5<cr>
+map <leader>K :resize -5<cr>
 map <leader>L :vertical resize +5<cr>
+
+noremap <right> :wincmd l <cr>
+noremap <left> :wincmd h <cr>
+noremap <up>   :wincmd k <cr>
+noremap <down> :wincmd j <cr>
 
 "shorty-cuts
 nmap <leader>R :source ~/.vimrc<cr>
@@ -33,30 +41,25 @@ nmap <leader>pp :set paste!<cr>
 nmap <leader>ll :set list!<cr>
 
 "breaking bad habits
-noremap <up> <NOP>
-noremap <down> <NOP>
-noremap <left> <NOP>
-noremap <right> <NOP>
-
 "accomodating bad habits
-command Q q
-command W w
-command Qall qall
+command! Q q
+command! W w
+command! Qall qall
 
 " Mash j and k to panic back to normal mode
-inoremap jk <esc>
-inoremap kj <esc>
+imap jk <esc>
+imap kj <esc>
 
 "plugin bindings
 map <leader><space> :StripWhitespace<cr>
-map <leader>n :RltvNmbr<cr>
-map <leader>N :RltvNmbr!<cr>
+map <leader>G :Goyo <cr>
 
 "un-highlight highlighted higlights after searching highlighted them
 nnoremap ,, :noh<cr>
 
-"run the current buffer as script
-nnoremap <leader>r :!%:p <ENTER>
+"running the current buffer as script
+nnoremap <leader>X :! chmod +x % <cr>
+nnoremap <leader>r :!%:p <cr>
 
 "I have no idea what this does anymore, but something might depend on it :v
 noremap <silent> <leader>vs :<C-u>let @z=&so<cr>:set so=0 noscb<cr>:bo vs<cr>Ljzt:setl scb<cr><C-w>p:setl scb<cr>:let &so=@z<cr>

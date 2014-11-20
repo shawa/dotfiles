@@ -2,6 +2,7 @@ source ~/.vim/vimfiles/vundle_setup.vim
 source ~/.vim/vimfiles/airline_config.vim
 source ~/.vim/vimfiles/prefs.vim
 source ~/.vim/vimfiles/bindings.vim
+source ~/.vim/vimfiles/functions.vim
 
 "  ______________________
 " |Oh dear, it's modular!|
