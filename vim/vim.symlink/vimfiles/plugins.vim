@@ -1,5 +1,6 @@
 "UI Chrome stuff
 Plugin 'bling/vim-airline'
+Plugin 'reedes/vim-colors-pencil'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/goyo.vim'
 
@@ -18,10 +19,13 @@ if has('mac')
     Plugin 'Valloric/YouCompleteMe'
 endif
 
+"File Handling
+Plugin 'vim-scripts/Shebang'
+
 "Editor mechanics
 Plugin 'Terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'atweiden/vim-dragvisuals'
+Plugin 'shinokada/dragvisuals.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 

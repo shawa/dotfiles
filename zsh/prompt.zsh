@@ -60,7 +60,7 @@ user_name() {
 }
 
 directory_name() {
-  echo "%{$fg_bold[white]%}%~ %{$reset_color%}"
+  echo "%{$fg_bold[gray]%}%~ %{$reset_color%}"
 }
 
 
