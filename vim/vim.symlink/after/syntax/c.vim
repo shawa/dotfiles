@@ -2,9 +2,6 @@ syn match ArrowTail contained "-" conceal cchar=━
 syn match ArrowFull "->" contains=ArrowHead,ArrowTail
 syn cluster cParenGroup add=ArrowTail,ArrowHead
 
-syn match Assign contained "=" conceal cchar=←
-syn cluster cParenGroup add=Assign
-
 syn match NequalHead contained "=" conceal cchar=═
 syn match NequalTail contained "!" conceal cchar=╪
 syn match NequalFull "!=" contains=NequalHead,NequalTail

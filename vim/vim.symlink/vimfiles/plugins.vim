@@ -9,6 +9,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
 "Syntactic thingers
+Plugin 'panozzaj/vim-autocorrect'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'

@@ -1,0 +1,2 @@
+#!/bin/sh
+watch --no-title -n 1 'date "+%H:%M:%S" | figlet -f doh -w 1000'

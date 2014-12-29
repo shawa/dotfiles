@@ -3,7 +3,7 @@ setlocal shiftwidth=8
 setlocal noexpandtab
 setlocal autoindent
 setlocal smarttab
-
+setlocal spell
 
 set cole=2
 set concealcursor=nvic

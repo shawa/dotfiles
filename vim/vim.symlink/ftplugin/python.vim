@@ -5,5 +5,7 @@ setlocal expandtab
 setlocal autoindent
 setlocal smarttab
 setlocal formatoptions=croql
+setlocal spell
 
+autocmd BufWritePre <buffer> StripWhitespace
 call SetShebang()
