@@ -52,8 +52,8 @@ au FocusLost * :wa
 
 syntax on
 
-colorscheme pencil
-set background=light
+colorscheme molokai
+set background=dark
 
 let g:better_whitespace_filetypes_blacklist=['markdown']
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
