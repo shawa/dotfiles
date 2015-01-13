@@ -1,3 +1,3 @@
-hi conceal ctermbg=NONE
+hi conceal guibg=NONE ctermbg=NONE
 hi Operator ctermfg=9
-hi Comment ctermfg=238
+hi Comment ctermfg=239

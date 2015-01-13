@@ -11,6 +11,3 @@ syn match EqualHead contained "=" conceal cchar=═
 syn match EqualTail contained "=" conceal cchar=═
 syn match EqualFull "==" contains=EqualHead,EqualTail
 syn cluster cParenGroup add=EqualTail,EqualHead
-
-
-

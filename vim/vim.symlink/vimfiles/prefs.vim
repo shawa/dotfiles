@@ -31,7 +31,7 @@ set ttyfast
 set more
 set wildmode=longest:full
 set wildmenu
-"set relativenumber
+set relativenumber
 
 
 

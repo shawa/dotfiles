@@ -1,5 +1,6 @@
-"UI Chrome stuff
+"UI Utilities, editing stuff
 Plugin 'bling/vim-airline'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/goyo.vim'
@@ -8,13 +9,16 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
-"Syntactic thingers
+"Language Support
+Plugin 'sukima/xmledit'
+Plugin 'wting/rust.vim'
+
+"Syntactic/textual thingers
 Plugin 'panozzaj/vim-autocorrect'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 Plugin 'Shougo/neocomplcache.vim'
-Plugin 'sukima/xmledit'
 Plugin 'scrooloose/syntastic'
 if has('mac')
     Plugin 'Valloric/YouCompleteMe'
