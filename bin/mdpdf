@@ -26,10 +26,8 @@ main(){
 	(pandoc "$filename"  \
 		-o "$outfile"   \
 		-c "$STYLESHEET" \
-		--number-sections \
 		--latex-engine=xelatex \
-			&& open "$outfile" \
-			&& open -a 'iTerm')&
+			&& open "$outfile")&
 
 #		if [ "$keep" = '' ]; then
 #			read -p "Refresh $outfile with any key" -n 1 -s

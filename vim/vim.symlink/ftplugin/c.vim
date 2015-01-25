@@ -12,3 +12,6 @@ map <leader>t :Tab /=<cr>
 map <leader>r :SCCompileRun<cr>
 map <leader>m :make<cr>
 autocmd BufWritePre <buffer> StripWhitespace
+
+let g:syntastic_c_checkers=['make','splint', 'gcc']
+

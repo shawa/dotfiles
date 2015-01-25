@@ -8,4 +8,5 @@ setlocal formatoptions=croql
 setlocal spell
 
 autocmd BufWritePre <buffer> StripWhitespace
-call SetShebang()
+
+let g:syntastic_c_checkers=['flake8', 'python', 'pep8']

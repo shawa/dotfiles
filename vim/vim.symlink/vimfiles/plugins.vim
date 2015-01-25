@@ -12,6 +12,7 @@ Plugin 'tomtom/tlib_vim'
 "Language Support
 Plugin 'sukima/xmledit'
 Plugin 'wting/rust.vim'
+Plugin 'dart-lang/dart-vim-plugin'
 
 "Syntactic/textual thingers
 Plugin 'panozzaj/vim-autocorrect'
@@ -20,9 +21,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'scrooloose/syntastic'
-if has('mac')
-    Plugin 'Valloric/YouCompleteMe'
-endif
+"if has('mac')
+"    Plugin 'Valloric/YouCompleteMe'
+"endif
 
 "File Handling
 Plugin 'vim-scripts/Shebang'
