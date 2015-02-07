@@ -49,6 +49,8 @@ command! Qall qall
 " Mash j and k to panic back to normal mode
 imap jk <esc>
 imap kj <esc>
+imap zx <esc> :w <cr> i
+imap xz <esc> :w <cr> i
 
 "plugin bindings
 map <leader><space> :StripWhitespace<cr>

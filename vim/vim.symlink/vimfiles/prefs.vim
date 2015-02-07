@@ -65,3 +65,5 @@ let g:ycm_filetype_blacklist = {
       \ 'pandoc' : 1,
       \ 'vim' : 1,
       \}
+au FileType c,python call rainbow#load()
+let g:rainbow_ctermfgs = ['red', 'blue', 'green' , 'yellow', 'magenta', 'white']

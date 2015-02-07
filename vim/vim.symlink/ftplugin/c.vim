@@ -5,7 +5,7 @@ setlocal autoindent
 setlocal smarttab
 setlocal spell
 
-set cole=2
+set cole=0
 set concealcursor=nvic
 
 map <leader>t :Tab /=<cr>
