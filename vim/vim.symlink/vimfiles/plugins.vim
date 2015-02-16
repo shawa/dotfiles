@@ -4,6 +4,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/goyo.vim'
 Plugin 'oblitum/rainbow'
+Plugin 'junegunn/vim-peekaboo'
 
 "Supporting Libs
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -13,7 +14,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'sukima/xmledit'
 Plugin 'wting/rust.vim'
 Plugin 'hdima/python-syntax'
-Plugin 'kchmck/vim-coffee-script' 
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-scripts/armasm'
 
 "Syntactic/textual thingers
 Plugin 'panozzaj/vim-autocorrect'

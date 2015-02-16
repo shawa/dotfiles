@@ -40,8 +40,8 @@ nmap <leader>WQ :wq!<cr>
 nmap <leader>pp :set paste!<cr>
 nmap <leader>ll :set list!<cr>
 
-"breaking bad habits
 "accomodating bad habits
+map Q <nop>
 command! Q q
 command! W w
 command! Qall qall
@@ -63,10 +63,6 @@ vmap  <expr>  L  DVB_Drag('right')
 vmap  <expr>  J  DVB_Drag('down')
 vmap  <expr>  K  DVB_Drag('up')
 vmap  <expr>  D  DVB_Duplicate()
-
-" Remove any introduced trailing whitespace after moving...
-let g:DVB_TrimWS = 1
-
 
 "un-highlight highlighted higlights after searching highlighted them
 nnoremap ,, :noh<cr>
