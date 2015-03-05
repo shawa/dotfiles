@@ -18,7 +18,7 @@ body {
     font-weight:300;
     line-height: 20px;
     margin:10em;
-    max-width:42em;
+    max-width:60em;
     background:#fefefe;
     color:#333;
 }
@@ -79,6 +79,7 @@ code {
 }
 
 pre {
+    font-family: 'Source Code Pro';
     border: 1px solid #CCCCCC;
     line-height: 1.25em;
     overflow: auto;
