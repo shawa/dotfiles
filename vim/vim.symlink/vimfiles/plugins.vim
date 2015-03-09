@@ -16,6 +16,7 @@ Plugin 'wting/rust.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'vim-scripts/armasm'
+Plugin 'vim-scripts/ledger.vim'
 
 "Syntactic/textual thingers
 Plugin 'panozzaj/vim-autocorrect'
