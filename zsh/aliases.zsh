@@ -1,6 +1,7 @@
 alias reload!='. ~/.zshrc'
 alias cal='cal -y'
 alias yt='youtube-dl'
+alias tx='tmux a -d || (cd; tmux)'
 
 # not my cup of concurrent tea
 brew() {

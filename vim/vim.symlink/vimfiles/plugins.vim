@@ -26,13 +26,13 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'ehamberg/vim-cute-python' "this is ridiculous
-Plugin 'drslump/vim-syntax-js' "so is this
 "if has('mac')
 "    Plugin 'Valloric/YouCompleteMe'
 "endif
 
 "File Handling
 Plugin 'vim-scripts/Shebang'
+Plugin 'jamessan/vim-gnupg'
 
 "Editor mechanics
 Plugin 'Terryma/vim-multiple-cursors'
