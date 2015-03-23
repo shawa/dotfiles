@@ -1,45 +1,32 @@
 "UI Utilities, editing stuff
-Plugin 'bling/vim-airline'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'junegunn/goyo.vim'
-Plugin 'oblitum/rainbow'
-Plugin 'junegunn/vim-peekaboo'
+Plugin 'bling/vim-airline'                  "status bar
+Plugin 'airblade/vim-gitgutter'             "show git changes in gutter
+Plugin 'junegunn/goyo.vim'                  "something of a 'zen mode'
+Plugin 'oblitum/rainbow'                    "rainbow parentheses
+Plugin 'junegunn/vim-peekaboo'              "show register contents on \" or \@
 
 "Supporting Libs
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'       "'interpret a file by function and cache file automatically'
+Plugin 'tomtom/tlib_vim'                    "utility functions
 
 "Language Support
-Plugin 'sukima/xmledit'
-Plugin 'wting/rust.vim'
-Plugin 'hdima/python-syntax'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-scripts/armasm'
-Plugin 'vim-scripts/ledger.vim'
+Plugin 'sukima/xmledit'                     "xml mode
+Plugin 'wting/rust.vim'                     "rust language support
+Plugin 'kchmck/vim-coffee-script'           "coffeescript (urgh) support
+Plugin 'vim-scripts/armasm'                 "ARM assembly languge
+Plugin 'vim-scripts/ledger.vim'             "gnu ledger syntax support
 
 "Syntactic/textual thingers
-Plugin 'panozzaj/vim-autocorrect'
-Plugin 'justinmk/vim-syntax-extra'
-Plugin 'honza/vim-snippets'
-Plugin 'garbas/vim-snipmate'
-Plugin 'Shougo/neocomplcache.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'ehamberg/vim-cute-python' "this is ridiculous
-"if has('mac')
+Plugin 'justinmk/vim-syntax-extra'          "better c definitions
+Plugin 'scrooloose/syntastic'               "various linter support
+
+"if has('mac')                               "the be-all end-all of autocompletion
 "    Plugin 'Valloric/YouCompleteMe'
 "endif
 
 "File Handling
-Plugin 'vim-scripts/Shebang'
-Plugin 'jamessan/vim-gnupg'
+Plugin 'jamessan/vim-gnupg'                 "transparent editing of symetrically-encrypted files
 
 "Editor mechanics
-Plugin 'Terryma/vim-multiple-cursors'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'shinokada/dragvisuals.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/tabular'
-
-"Miscellaneous utilities
-Plugin 'vim-scripts/AfterColors.vim'
+Plugin 'Terryma/vim-multiple-cursors'       "multiple cursors
+Plugin 'ntpeters/vim-better-whitespace'     "highlight and strip trailing whitespace

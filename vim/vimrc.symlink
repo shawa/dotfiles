@@ -4,9 +4,9 @@ source ~/.vim/vimfiles/prefs.vim
 source ~/.vim/vimfiles/bindings.vim
 source ~/.vim/vimfiles/functions.vim
 
-"  ______________________
-" |Oh dear, it's modular!|
-"  ----------------------
+"  __________________________
+" |Oh dear, it's all modular!|
+"  --------------------------
 "         \   ^__^
 "          \  (oo)\_______
 "             (__)\       )\/\

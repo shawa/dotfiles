@@ -42,7 +42,7 @@ need_push () {
   then
     echo " "
   else
-    echo " with %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo " %{$fg_bold[magenta]%}U%{$reset_color%} "
   fi
 }
 
@@ -50,7 +50,7 @@ host_color="$(hostcolor)"
 user_name() {
   local usercolor=''
   if [[ "$(/usr/bin/whoami)" == 'root' ]]
-  then 
+  then
     usercolor='red'
     hostcolor='red'
   else
