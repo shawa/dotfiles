@@ -1,7 +1,5 @@
 "UI Utilities, editing stuff
-"Plugin 'bling/vim-airline'                  "status bar
-Plugin 'itchyny/lightline.vim'
-Plugin 'bling/vim-bufferline'
+Plugin 'bling/vim-airline'                  "status bar
 Plugin 'airblade/vim-gitgutter'             "show git changes in gutter
 Plugin 'junegunn/goyo.vim'                  "something of a 'zen mode'
 Plugin 'oblitum/rainbow'                    "rainbow parentheses
