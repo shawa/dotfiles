@@ -1,6 +1,6 @@
 #!/bin/sh
 
-readonly STYLESHEET="$HOME/.pandoc/latex.css"
+readonly STYLESHEET="$HOME/.pandoc/github.css"
 
 usage(){
 cat <<-EOF

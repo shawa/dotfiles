@@ -1,14 +1,8 @@
-atom.symlink/.node-gyp
-atom.symlink/.storage
-atom.symlink/packages
-atom.symlink/compile-cache
-atom.symlink/storage
-atom.symlink/themes
-atom.symlink/icon
-
 vim/vim.symlink/spell/*
 vim/vim.symlink/plugin
 vim/vim.symlink/bundle
+vim/vim.symlink/plugged
+vim/vim.symlink/autoload
 vim/vim.symlink/.netrwhist
 vim/vim.symlink/vimfiles/syntax/*.vim
 vim/vim.symlink/eclim
