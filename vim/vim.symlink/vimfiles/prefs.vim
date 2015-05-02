@@ -1,4 +1,3 @@
-"Defaults. Syntax-specific stuff is in ftplugin
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -33,37 +32,17 @@ set wildmode=longest:full
 set wildmenu
 set relativenumber
 
-
-
-runtime plugin/dragvisuals.vim
-
-vmap  <expr>  <LEFT>   DVB_Drag('left')
-vmap  <expr>  <RIGHT>  DVB_Drag('right')
-vmap  <expr>  <DOWN>   DVB_Drag('down')
-vmap  <expr>  <UP>     DVB_Drag('up')
-vmap  <expr>  D        DVB_Duplicate()
-
-" Remove any introduced trailing whitespace after moving...
-let g:DVB_TrimWS = 1
-
-
-"Write buffer when window loses focus
-au FocusLost * :wa
-
 syntax on
 
 colorscheme molokai
 set background=dark
 
-let g:better_whitespace_filetypes_blacklist=['markdown']
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-let g:ycm_confirm_extra_conf = 0
+"airline
+let g:airline_theme = 'powerlineish'
 
-let g:ycm_filetype_blacklist = {
-      \ 'markdown' : 1,
-      \ 'text' : 1,
-      \ 'pandoc' : 1,
-      \ 'vim' : 1,
-      \}
-au FileType c,python,haskell,coffee,java call rainbow#load()
-let g:rainbow_ctermfgs = ['red', 'blue', 'green' , 'yellow', 'magenta', 'white']
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
