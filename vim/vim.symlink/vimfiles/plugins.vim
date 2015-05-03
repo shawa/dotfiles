@@ -12,13 +12,13 @@ Plug 'tomtom/tlib_vim'                "utility functions
 
 "Lanage Support
 Plug 'sukima/xmledit'                 "xml mode
-Plug 'wting/rust.vim'                 "rust language support
-Plug 'kchmck/vim-coffee-script'       "coffeescript (urgh) support
+Plug 'wting/rust.vim'                 "rust language
 Plug 'vim-scripts/armasm'             "ARM assembly languge
-Plug 'vim-scripts/ledger.vim'         "gnu ledger syntax support
+Plug 'vim-scripts/ledger.vim'         "gnu ledger syntax
+Plug 'othree/yajs.vim'                "ES6 support
+Plug 'justinmk/vim-syntax-extra'      "better c definitions
 
 "Synctic/textual thingers
-Plug 'justinmk/vim-syntax-extra'      "better c definitions
 Plug 'scrooloose/syntastic'           "various linter support
 
 if has('mac')                           "the be-all end-all of autocompletion
