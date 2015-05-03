@@ -4,7 +4,7 @@ set expandtab
 
 set nu
 set backspace=indent,eol,start
-
+set noshowmode "airline does this for us
 set ignorecase
 set smartcase
 set gdefault
@@ -39,10 +39,15 @@ set background=dark
 
 "airline
 let g:airline_theme = 'powerlineish'
-
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
-
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+
+"syntastic
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+
+let g_syntastic_c_checkers = ["clang"]
+let g_syntastic_python_checkers = ["flake8"]
+let g:ycm_confirm_extra_conf = 0
