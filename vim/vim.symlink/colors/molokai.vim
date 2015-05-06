@@ -136,7 +136,7 @@ end
 "
 if &t_Co > 255
    if s:molokai_original == 1
-      hi Normal                   ctermbg=235
+      hi Normal                   ctermbg=234
       hi CursorLine               ctermbg=235   cterm=none
       hi CursorLineNr ctermfg=208               cterm=none
    else
@@ -160,14 +160,14 @@ if &t_Co > 255
    hi DiffDelete      ctermfg=162 ctermbg=53
    hi DiffText                    ctermbg=102 cterm=bold
 
-   hi Directory       ctermfg=118               cterm=bold
+   hi Directory       ctermfg=154               cterm=bold
    hi Error           ctermfg=219 ctermbg=89
    hi ErrorMsg        ctermfg=199 ctermbg=16    cterm=bold
-   hi Exception       ctermfg=118               cterm=bold
+   hi Exception       ctermfg=154               cterm=bold
    hi Float           ctermfg=135
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
-   hi Function        ctermfg=118
+   hi Function        ctermfg=154
    hi Identifier      ctermfg=208               cterm=none
    hi Ignore          ctermfg=244 ctermbg=232
    hi IncSearch       ctermfg=193 ctermbg=16
@@ -188,20 +188,20 @@ if &t_Co > 255
    hi PmenuSbar                   ctermbg=232
    hi PmenuThumb      ctermfg=81
 
-   hi PreCondit       ctermfg=118               cterm=bold
-   hi PreProc         ctermfg=118
+   hi PreCondit       ctermfg=154               cterm=bold
+   hi PreProc         ctermfg=147
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=bold
    hi Search          ctermfg=0   ctermbg=222   cterm=NONE
 
    " marks column
-   hi SignColumn      ctermfg=118 ctermbg=235
+   hi SignColumn      ctermfg=154 ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
    hi Special         ctermfg=81
    if has("spell")
-       hi SpellBad                ctermbg=52
-       hi SpellCap                ctermbg=17
+       hi SpellBad    ctermfg=171 ctermbg=88
+       hi SpellCap    ctermfg=033 ctermbg=17
        hi SpellLocal              ctermbg=17
        hi SpellRare  ctermfg=none ctermbg=none  cterm=reverse
    endif
@@ -220,11 +220,11 @@ if &t_Co > 255
 
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=bold
    hi VisualNOS                   ctermbg=238
-   hi Visual                      ctermbg=18
+   hi Visual                      ctermbg=235
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
-   hi Comment         ctermfg=59
+   hi Comment         ctermfg=238
    hi CursorColumn                ctermbg=236
    hi ColorColumn                 ctermbg=236
    hi LineNr          ctermfg=250 ctermbg=236
@@ -233,8 +233,8 @@ if &t_Co > 255
    hi SpecialKey      ctermfg=59
 
    if exists("g:rehash256") && g:rehash256 == 1
-       hi Normal       ctermfg=252 ctermbg=236
-       hi CursorLine               ctermbg=240   cterm=none
+       hi Normal       ctermfg=252 ctermbg=234
+       hi CursorLine               ctermbg=236   cterm=none
        hi CursorLineNr ctermfg=208               cterm=none
 
        hi Boolean         ctermfg=141
@@ -259,10 +259,10 @@ if &t_Co > 255
        hi PreProc         ctermfg=154
        hi Repeat          ctermfg=197               cterm=bold
 
-       hi Statement       ctermfg=100               cterm=bold
+       hi Statement       ctermfg=197               cterm=bold
        hi Tag             ctermfg=197
        hi Title           ctermfg=203
-       hi Visual                      ctermbg=100
+       hi Visual                      ctermbg=238
 
        hi Comment         ctermfg=244
        hi LineNr          ctermfg=239 ctermbg=235
@@ -273,5 +273,4 @@ end
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
-hi normal ctermbg=none
 set background=dark
