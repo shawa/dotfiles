@@ -64,3 +64,5 @@ nnoremap ,, :noh<cr>
 nnoremap <leader>X :! chmod +x % <cr>
 nnoremap <leader>r :!%:p <cr>
 
+"git
+nmap <leader>C :Gcommit -a <cr>
