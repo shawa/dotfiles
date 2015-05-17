@@ -1,4 +1,4 @@
-set conceallevel=2
-set concealcursor=nc
-let g:syntax_js=['function', 'return']
+set tabstop=4
+set shiftwidth=4
 
+set spell

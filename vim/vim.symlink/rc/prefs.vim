@@ -38,8 +38,8 @@ colorscheme molokai
 set background=dark
 
 "rainbow parens
-let g:rainbow_active = 1
 let g:rainbow_ctermfgs = [160, 178, 190, 195, 219, 201]
+
 "airline
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#enabled = 1

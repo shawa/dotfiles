@@ -25,7 +25,7 @@ map <leader>L :vertical resize +5<cr>
 noremap <tab>   :wincmd w <cr>
 
 "line movements with arrow keys
-noremap <right> >
+noremap <right> >>
 noremap <left>  <<
 "drag current line
 noremap <down>  :m .+1    <cr>
@@ -64,6 +64,7 @@ nnoremap ,, :noh<cr>
 nnoremap <leader>X :! chmod +x % <cr>
 nnoremap <leader>r :!%:p <cr>
 
-"git
+"Git fugitive is seriously good
 nmap <leader>c :Gcommit -a <cr>
 nmap <leader>s :Gstatus    <cr>
+nmap <leader>d :Gdiff      <cr>
