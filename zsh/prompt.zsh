@@ -29,7 +29,6 @@ git_dirty() {
 
 git_prompt_info () {
  ref=$($git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
@@ -42,7 +41,7 @@ need_push () {
   then
     echo " "
   else
-    echo " %{$fg_bold[magenta]%}U%{$reset_color%} "
+    echo " is %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
   fi
 }
 
@@ -66,7 +65,7 @@ directory_name() {
 
 set_prompt () {
     export PROMPT=$'\n$(user_name) $(directory_name)$(git_dirty)$(need_push)\n› '
-    export RPROMPT="%{$fg_bold[gray]%}$(date '+%H:%M')%{$reset_color%}"
+    export RPROMPT="%! %? %*"
 }
 
 precmd() {

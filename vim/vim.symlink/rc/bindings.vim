@@ -58,7 +58,7 @@ map <leader><space> :StripWhitespace<cr>
 map <leader>G :Goyo <cr>
 
 "un-highlight search highlight
-nnoremap ,, :noh<cr>
+map <leader>/ :noh<cr>
 
 "running the current buffer as script
 nnoremap <leader>X :! chmod +x % <cr>
