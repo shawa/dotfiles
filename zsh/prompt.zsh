@@ -45,7 +45,8 @@ need_push () {
   fi
 }
 
-host_color="$(hostcolor)"
+#host_color="$(hostcolor)"
+host_color='blue'
 user_name() {
   local usercolor=''
   if [[ "$(/usr/bin/whoami)" == 'root' ]]
