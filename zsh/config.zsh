@@ -6,7 +6,6 @@ fi
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
-
 export PAGER="less"
 export EDITOR="vim"
 

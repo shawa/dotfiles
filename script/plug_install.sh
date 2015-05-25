@@ -2,8 +2,8 @@
 
 # Install vim-plug, with rudimentary integrity checking before blindly loading
 # it into our config
-readonly SHA1SUM='71c8e962a4db65182b26c6e3d1bcd4491ac38784'
-readonly MD5SUM='19e5a984e3c136c6b2ad39f219931a16'
+readonly SHA1SUM='96ab0b0eb46723a8435c01a83c108913e3e8f5fb'
+readonly MD5SUM='a3ef17ce46e9e02dba8974ce9dc6751b'
 
 readonly TMPFILE='plug.vim.tmp'
 readonly INSTALL_DIR="$HOME/.vim/autoload"
