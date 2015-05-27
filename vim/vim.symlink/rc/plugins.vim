@@ -34,6 +34,7 @@ if has('mac')                           "the be-all end-all of auto completion
 end
 
 "File handling
+Plug 'scrooloose/nerdtree'            "filesytem explorer
 Plug 'jamessan/vim-gnupg'             "transparent editing of symetrically-encrypted files
 
 call plug#end()
