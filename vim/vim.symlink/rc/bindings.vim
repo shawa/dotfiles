@@ -52,10 +52,13 @@ nmap <leader>R :source ~/.vimrc<cr>
 
 "toggle weirdo modes
 nmap <leader>ll :set list!<cr>
+nmap <leader>pp :set paste!<cr>
+
 
 "plugin bindings
 map <leader><space> :StripWhitespace<cr>
 map <leader>G :Goyo <cr>
+map <leader>t :NERDTreeToggle <cr>
 
 "un-highlight search highlight
 map <leader>/ :noh<cr>
