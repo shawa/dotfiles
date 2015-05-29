@@ -1,7 +1,4 @@
 call plug#begin('~/.vim/plugged')
-"Color scheme
-Plug 'baskerville/bubblegum'
-
 "UI Utilities, editing stuff
 Plug 'bling/vim-airline'              "status bar
 Plug 'airblade/vim-gitgutter'         "show git changes in gutter
@@ -18,24 +15,17 @@ Plug 'MarcWeber/vim-addon-mw-utils'   "'interpret a file by function and cache f
 Plug 'tomtom/tlib_vim'                "utility functions
 
 "Language Support
-Plug 'sukima/xmledit'                 "XML mode
-Plug 'wting/rust.vim'                 "rust language
-Plug 'vim-scripts/armasm'             "ARM assembly language
+Plug 'plasticboy/vim-markdown'        "markdown mode
 Plug 'vim-scripts/ledger.vim'         "gnu ledger syntax
-Plug 'othree/yajs.vim'                "ES6 support
 Plug 'justinmk/vim-syntax-extra'      "better c definitions
-Plug 'plasticboy/vim-markdown'
 
 "Syntactic/textual thingers
 Plug 'scrooloose/syntastic'           "various linter support
-
-if has('mac')                           "the be-all end-all of auto completion
-    Plug 'Valloric/YouCompleteMe'
-end
+Plug 'Valloric/YouCompleteMe'         "the be-all end-all of auto completion
 
 "File handling
 Plug 'scrooloose/nerdtree'            "filesytem explorer
-Plug 'jamessan/vim-gnupg'             "transparent editing of symetrically-encrypted files
+Plug 'jamessan/vim-gnupg'             "transparent editing of encrypted files
 
 call plug#end()
 
