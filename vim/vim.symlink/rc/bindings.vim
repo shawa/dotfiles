@@ -71,3 +71,8 @@ nnoremap <leader>r :!%:p <cr>
 nmap <leader>c :Gcommit -a <cr>
 nmap <leader>s :Gstatus    <cr>
 nmap <leader>d :Gdiff      <cr>
+
+"Ultisnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-B>"

@@ -17,11 +17,13 @@ Plug 'tomtom/tlib_vim'                "utility functions
 "Language Support
 Plug 'plasticboy/vim-markdown'        "markdown mode
 Plug 'vim-scripts/ledger.vim'         "gnu ledger syntax
-Plug 'justinmk/vim-syntax-extra'      "better c definitions
-
+Plug 'justinmk/vim-syntax-extra'      "better c
+Plug 'hdima/python-syntax'            "better python
 "Syntactic/textual thingers
 Plug 'scrooloose/syntastic'           "various linter support
 Plug 'Valloric/YouCompleteMe'         "the be-all end-all of auto completion
+Plug 'SirVer/ultisnips'               "snippet engine
+Plug 'honza/vim-snippets'             "snippets
 
 "File handling
 Plug 'scrooloose/nerdtree'            "filesytem explorer

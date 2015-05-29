@@ -54,4 +54,3 @@ let g_syntastic_c_checkers = ["clang"]
 let g_syntastic_python_checkers = ["flake8"]
 let g:ycm_confirm_extra_conf = 0
 
-"markdown
