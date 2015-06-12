@@ -18,7 +18,8 @@ Plug 'tomtom/tlib_vim'                "utility functions
 Plug 'plasticboy/vim-markdown'        "markdown mode
 Plug 'vim-scripts/ledger.vim'         "gnu ledger syntax
 Plug 'justinmk/vim-syntax-extra'      "better c
-Plug 'hdima/python-syntax'            "better python
+"Plug 'klen/python-mode'
+
 "Syntactic/textual thingers
 Plug 'scrooloose/syntastic'           "various linter support
 Plug 'Valloric/YouCompleteMe'         "the be-all end-all of auto completion
@@ -29,5 +30,7 @@ Plug 'honza/vim-snippets'             "snippets
 Plug 'scrooloose/nerdtree'            "filesytem explorer
 Plug 'jamessan/vim-gnupg'             "transparent editing of encrypted files
 
+"Others
+Plug 'alfredodeza/pytest.vim'         "python unit tests
 call plug#end()
 

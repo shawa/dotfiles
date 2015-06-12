@@ -46,9 +46,12 @@ nnoremap \\s z=
 "Add as correct
 nnoremap \S zg
 
-
 "reload
 nmap <leader>R :source ~/.vimrc<cr>
+
+" C-a typically decrements the number under the cursor
+" Yet this conflicts with tmux
+nnoremap <C-s> <C-a>
 
 "toggle weirdo modes
 nmap <leader>ll :set list!<cr>
@@ -63,9 +66,11 @@ map <leader>t :NERDTreeToggle <cr>
 "un-highlight search highlight
 map <leader>/ :noh<cr>
 
-"running the current buffer as script
+"running current buffer as script
 nnoremap <leader>X :! chmod +x % <cr>
 nnoremap <leader>r :!%:p <cr>
+
+"Plugin specific below
 
 "Git fugitive is seriously good
 nmap <leader>c :Gcommit -a <cr>
