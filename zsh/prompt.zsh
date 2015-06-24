@@ -64,8 +64,12 @@ directory_name() {
 }
 
 
+virtual_env(){
+    [ $VIRTUAL_ENV ] && echo "under %{$fg_bold[yellow]%}venv%{$reset_color%}"
+}
+
 set_prompt () {
-    export PROMPT=$'\n$(user_name) $(directory_name)$(git_dirty)$(need_push)\n› '
+    export PROMPT=$'\n$(user_name) $(directory_name)$(git_dirty)$(need_push)$(virtual_env)\n› '
     export RPROMPT="%! %? %*"
 }
 

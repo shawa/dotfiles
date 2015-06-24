@@ -73,9 +73,10 @@ nnoremap <leader>r :!%:p <cr>
 "Plugin specific below
 
 "Git fugitive is seriously good
-nmap <leader>c :Gcommit -a <cr>
-nmap <leader>s :Gstatus    <cr>
-nmap <leader>d :Gdiff      <cr>
+nmap <leader>gc :Gcommit -a <cr>
+nmap <leader>gs :Gstatus    <cr>
+nmap <leader>gd :Gdiff      <cr>
+nmap <leader>gp :Gpush      <cr>
 
 "Ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"

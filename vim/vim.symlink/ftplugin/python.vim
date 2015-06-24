@@ -7,8 +7,6 @@ setlocal formatoptions=croql
 setlocal spell
 setlocal colorcolumn=119
 
-call rainbow#load()
-
 autocmd BufWritePre <buffer> StripWhitespace
 let g:syntastic_c_checkers=['flake8', 'python', 'pep8']
 
@@ -20,3 +18,6 @@ let python_highlight_string_templates=1
 let python_highlight_indent_errors=1
 let python_highlight_space_errors=1
 let python_highlight_doctests=1
+
+
+call rainbow#load()
