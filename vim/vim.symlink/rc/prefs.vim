@@ -1,3 +1,5 @@
+filetype plugin indent on
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -33,12 +35,15 @@ set wildmenu
 set relativenumber
 
 syntax on
-
-colorscheme molokai
 set background=dark
+colorscheme molokai
+
 
 "rainbow parens
-let g:rainbow_ctermfgs = [160, 178, 190, 195, 219, 201]
+au VimEnter * RainbowToggle
+au Syntax * RainbowLoad
+
+let g:rainbow_ctermfgs = [196, 220, 190, 051, 153]
 
 "airline
 let g:airline_theme = 'powerlineish'

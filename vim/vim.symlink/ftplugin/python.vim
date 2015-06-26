@@ -18,6 +18,3 @@ let python_highlight_string_templates=1
 let python_highlight_indent_errors=1
 let python_highlight_space_errors=1
 let python_highlight_doctests=1
-
-
-call rainbow#load()
