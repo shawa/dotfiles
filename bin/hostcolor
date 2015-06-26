@@ -1,5 +1,5 @@
 #!/bin/bash
-hostname | sha1sum | awk -f <(sed -e '0,/^#!.*awk/d' $0)
+hostname | md5sum | awk -f <(sed -e '0,/^#!.*awk/d' $0)
 exit $PIPESTATUS
 
 #!/usr/bin/awk -f
