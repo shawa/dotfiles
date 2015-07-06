@@ -5,7 +5,6 @@ Plug 'airblade/vim-gitgutter'         "show git changes in gutter
 Plug 'tpope/vim-fugitive'             "Git wrapper
 Plug 'junegunn/goyo.vim'              "something of a 'zen mode'
 Plug 'oblitum/rainbow'                "rainbow parentheses
-Plug 'junegunn/vim-peekaboo'          "show register contents on \" or \@
 Plug 'Terryma/vim-multiple-cursors'   "multiple cursors
 Plug 'ntpeters/vim-better-whitespace' "highlight and strip trailing whitespace
 Plug 'godlygeek/tabular'              "table formatting (install before vim-markdown)
