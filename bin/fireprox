@@ -1,5 +1,0 @@
-#!/bin/sh
-ssh -vND 5000 spoon&
-
-sleep 2
-open -a Firefox 'http://webcat.scss.tcd.ie/cs2012/WebObjects/Web-CAT.woa'
