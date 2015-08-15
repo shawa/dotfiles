@@ -17,7 +17,7 @@ Plug 'tomtom/tlib_vim'                "utility functions
 Plug 'plasticboy/vim-markdown'        "markdown mode
 Plug 'vim-scripts/ledger.vim'         "gnu ledger syntax
 Plug 'justinmk/vim-syntax-extra'      "better c
-"Plug 'klen/python-mode'
+Plug 'rust-lang/rust.vim'             "rust
 
 "Syntactic/textual thingers
 Plug 'scrooloose/syntastic'           "various linter support

@@ -77,8 +77,3 @@ nmap <leader>gc :Gcommit -a <cr>
 nmap <leader>gs :Gstatus    <cr>
 nmap <leader>gd :Gdiff      <cr>
 nmap <leader>gp :Gpush      <cr>
-
-"Ultisnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-B>"
