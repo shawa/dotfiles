@@ -14,11 +14,14 @@ Plug 'ntpeters/vim-better-whitespace' "highlight and strip trailing whitespace
 Plug 'scrooloose/nerdtree'            "filesytem explorer
 Plug 'jamessan/vim-gnupg'             "transparent editing of encrypted files
 
+Plug 'dag/vim-fish'
 "Graveyard
 "Plug 'Terryma/vim-multiple-cursors'   "multiple cursors
 "Plug 'godlygeek/tabular'              "table formatting (install before vim-markdown)
-"Plug 'scrooloose/syntastic'           "various linter support
+Plug 'scrooloose/syntastic'           "various linter support
 "Plug 'Valloric/YouCompleteMe'         "the be-all end-all of auto completion
-"Plug 'junegunn/goyo.vim'              "something of a 'zen mode'
+
+Plug 'aklt/plantuml-syntax'
+Plug 'junegunn/goyo.vim'              "something of a 'zen mode'
 call plug#end()
 

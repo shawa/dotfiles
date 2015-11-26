@@ -1,9 +1,7 @@
 # Cheers to Mark:  http://zanshin.net/2013/09/05/my-tmux-configuration/
+#
+set-option -g default-shell "/bin/zsh"
 
-# fix pbcopy
-if-shell 'test "$(uname)" = "Darwin"' 'set-option -g default-command "reattach-to-user-namespace -l zsh"'
-
-# use UTF8
 # make tmux display things in 256 colors
 set -g default-terminal "screen-256color"
 
@@ -61,7 +59,7 @@ set -g mouse-select-window off
 # Copy & Paste
 # ---------------------
 # provide access to the clipboard for pbpaste, pbcopy
-if-shell 'test "$(uname)" = "Darwin"' 'set-option -g default-command "reattach-to-user-namespace -l zsh"'
+if-shell 'test "$(uname)" = "Darwin"' 'set-option -g default-command "reattach-to-user-namespace -l /bin/zsh"'
 set-window-option -g automatic-rename on
 
 # use vim keybindings in copy mode

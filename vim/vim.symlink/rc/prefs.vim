@@ -39,9 +39,8 @@ set background=dark
 colorscheme molokai
 
 
-"rainbow parens
-au VimEnter * RainbowToggle
-au Syntax * RainbowLoad
+"crontab fix
+autocmd filetype crontab setlocal nobackup nowritebackup
 
 let g:rainbow_ctermfgs = [196, 220, 190, 051, 153]
 
