@@ -1,6 +1,7 @@
 syntax on
 set relativenumber
 set hlsearch
+set ruler
 set showmatch
 
 set tabstop=4
