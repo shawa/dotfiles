@@ -6,6 +6,8 @@ set hlsearch
 set ruler
 set showmatch
 
+set laststatus=2
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
