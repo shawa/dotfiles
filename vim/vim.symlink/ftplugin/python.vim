@@ -1,0 +1,1 @@
+setlocal equalprg=autopep8\ -

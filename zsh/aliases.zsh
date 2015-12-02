@@ -5,6 +5,7 @@ alias tx='tmux a -d || (cd; tmux)'
 alias qr='qrencode -t ANSI'
 alias sl='sl -ea'
 alias au='sox -t raw -r44100 -b16 -e unsigned-integer - -tcoreaudio' # sort of /dev/audio
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 2> /dev/null > /dev/null &'
 
 if [ $(uname) = 'Linux' ];
 then
