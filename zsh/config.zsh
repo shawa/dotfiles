@@ -11,8 +11,6 @@ export EDITOR="vim"
 
 fpath=($ZSH/functions $fpath)
 
-#autoload -U $ZSH/functions/*(:t)
-
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -39,7 +37,6 @@ setopt HIST_REDUCE_BLANKS
 setopt complete_aliases
 
 zle -N newtab
-
 #vi mode line editing
 bindkey -v
 bindkey '^[^[[D' backward-word

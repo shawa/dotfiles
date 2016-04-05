@@ -1,6 +1,4 @@
 autoload colors && colors
-# cheers, @ehrenmurdick
-# http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
 if (( $+commands[git] ))
 then
@@ -20,9 +18,9 @@ git_dirty() {
   else
     if [[ $($git status --porcelain) == "" ]]
     then
-      echo "%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "%{$fg_bold[white]%}$(git_prompt_info)%{$reset_color%}"
     else
-      echo "%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "%{$fg_bold[yellow]%}$(git_prompt_info)%{$reset_color%}"
     fi
   fi
 }
@@ -41,22 +39,12 @@ need_push () {
   then
     echo " "
   else
-    echo " is %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
+    echo " %{$fg_bold[magenta]%}↑%{$reset_color%} "
   fi
 }
 
-#host_color="$(hostcolor)"
-host_color='blue'
 user_name() {
-  local usercolor=''
-  if [[ "$(/usr/bin/whoami)" == 'root' ]]
-  then
-    usercolor='red'
-    hostcolor='red'
-  else
-    usercolor='green'
-  fi
-    echo "%{$fg_bold[$usercolor]%}%n%{$reset_color%}@%{$fg_bold[$host_color]%}%M%{$reset_color%}"
+    echo "%n@%M% "
 }
 
 directory_name() {
@@ -64,13 +52,9 @@ directory_name() {
 }
 
 
-virtual_env(){
-    [ $VIRTUAL_ENV ] && echo "under %{$fg_bold[yellow]%}venv%{$reset_color%}"
-}
-
 set_prompt () {
-    export PROMPT=$'\n$(user_name) $(directory_name)$(git_dirty)$(need_push)$(virtual_env)\n› '
-    export RPROMPT="%! %? %*"
+    export PROMPT=$'\n$(directory_name)$(git_dirty)$(need_push)\n› '
+    export RPROMPT="%*"
 }
 
 precmd() {

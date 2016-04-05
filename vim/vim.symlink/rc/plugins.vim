@@ -1,3 +1,17 @@
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/goyo.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/SyntaxRange'
+Plug 'vim-scripts/brainfuck-syntax'
 Plug 'scrooloose/syntastic'
+Plug 'wting/rust.vim'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'airblade/vim-gitgutter'
+Plug 'fxn/vim-monochrome'
+Plug 'robertmeta/nofrils'
+Plug 'jaxbot/semantic-highlight.vim'
+Plug 'elixir-lang/vim-elixir'
 call plug#end()

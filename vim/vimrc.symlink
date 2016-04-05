@@ -11,3 +11,8 @@ source ~/.vim/rc/plugins.vim
 "                 ||----w |
 "                 ||     ||
 
+" Things to make vim better
+" [ ] Yank and Put that works nicely
+" [ ] Vi mode for : and /
+" [ ] / autocomplete?
+

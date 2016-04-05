@@ -14,7 +14,7 @@ set -g prefix C-a
 unbind C-b
 
 # use send-prefix to pass C-a through to application
-bind-key -n C-a send-prefix
+bind a send-prefix
 
 # shorten command delay
 set -sg escape-time 1
