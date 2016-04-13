@@ -1,6 +1,5 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$ZSH/bin:./bin:$PATH"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-PATH="$PATH:/Users/shawa/Documents/insa/sea/tools/qemu/arm-softmmu"
 PATH="$PATH:$HOME/bin"
 PATH="$PATH:$HOME/.cabal/bin"
 
