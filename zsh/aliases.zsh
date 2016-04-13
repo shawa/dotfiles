@@ -11,6 +11,20 @@ alias gcc='/usr/local/Cellar/gcc/5.3.0/bin/gcc-5'
 
 rm(){ srm $@ & }
 
+remote() {
+    [ -z $1 ] && return 
+    local URL=$(ssh cube "/home/shawa/.dotfiles/bin/repo $1")
+    pbcopy <<< $URL
+    echo $URL
+}
+
+tip() {
+    touch "$1"
+    git add "$1"
+    git commit -am "add $1"
+    git push
+}
+
 if [ $(uname) = 'Linux' ];
 then
     alias ls='ls --color=auto'
