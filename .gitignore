@@ -4,7 +4,5 @@ vim/vim.symlink/bundle
 vim/vim.symlink/plugged
 vim/vim.symlink/autoload
 vim/vim.symlink/.netrwhist
-vim/vim.symlink/vimfiles/syntax/*.vim
-vim/vim.symlink/eclim
 
 git/gitconfig.symlink
