@@ -1,5 +1,0 @@
-#!/bin/sh
-
-#this could be useful at some point, possibly
-
-curl "http://www.anagramica.com/all/$1" 2> /dev/null | jq -r '.all[]'

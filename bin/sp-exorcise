@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # purge the current directory and all its children of filthy spotlight index files
-
 find . -name .DS_Store -printf \"%p\"\ \  | xargs rm
 find . -name ._.DS_Store -printf \"%p\"\ \  | xargs rm
 
