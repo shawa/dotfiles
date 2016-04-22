@@ -24,16 +24,8 @@ set t_vb=
 set background=dark
 colorscheme molokai
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au BufWrite * Neomake
+au BufWritePost,BufEnter * Neomake
 
-" let g:syntastic_python_python_exec = 'python3'
-" let g:syntastic_python_checkers = ['flake8', 'mypy']
-" let g:syntastic_python_flake8_exe = 'python3 -m flake8'
-" let g:syntastic_enable_elixir_checker = 1
 
 "the unicode signs look awful, sorry
 let g:neomake_error_sign = { 'text' : 'E' }
@@ -41,3 +33,20 @@ let g:neomake_warning_sign = { 'text' : 'W' }
 let g:neomake_message_sign = { 'text' : 'M' }
 let g:neomake_informational_sign = { 'text' : 'i' }
 set dictionary=/usr/share/dict/words
+
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+\   'ctermfgs': ['red', 'blue', 'magenta', 'yellow', 'darkblue', 'green', 'brown'],
+\   'operators': '_,_',
+\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\   'separately': {
+\       '*': {},
+\       'tex': {
+\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\       },
+\       'html': {
+\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\       },
+\       'css': 0,
+\   }
+\}

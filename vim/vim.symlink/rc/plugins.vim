@@ -1,10 +1,9 @@
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'vim-scripts/brainfuck-syntax'
-"Plug 'scrooloose/syntastic'
 Plug 'benekastah/neomake'
 Plug 'wting/rust.vim'
 Plug 'ntpeters/vim-better-whitespace'
