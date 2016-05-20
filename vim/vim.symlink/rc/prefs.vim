@@ -23,6 +23,7 @@ set t_vb=
 
 set background=dark
 colorscheme molokai
+set dictionary=/usr/share/dict/words
 
 au BufWritePost,BufEnter * Neomake
 
@@ -32,7 +33,6 @@ let g:neomake_error_sign = { 'text' : 'E' }
 let g:neomake_warning_sign = { 'text' : 'W' }
 let g:neomake_message_sign = { 'text' : 'M' }
 let g:neomake_informational_sign = { 'text' : 'i' }
-set dictionary=/usr/share/dict/words
 
 let g:rainbow_active = 1
 let g:rainbow_conf = {
