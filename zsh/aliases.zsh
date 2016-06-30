@@ -19,10 +19,16 @@ fi
 rm(){ srm $@ & }
 
 remote() {
-    [ -z $1 ] && return
-    local URL=$(ssh cube "/home/shawa/.dotfiles/bin/repo $1")
-    pbcopy <<< $URL
-    echo $URL
+    [ -z "$1" ] && return
+
+    local name="$1"; shift
+    local URL=$(ssh cube NAME="$name" 'bash -s' < "/$HOME/.dotfiles/bin/repo")
+
+    if [ "$1" = "-c" ];  then
+        git clone "$URL"
+    else
+        echo "$URL"
+    fi
 }
 
 tip() {

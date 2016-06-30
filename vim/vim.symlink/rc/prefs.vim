@@ -1,32 +1,26 @@
-syntax on
-filetype plugin indent on 
+colorscheme molokai
+set background=dark
 
+filetype plugin indent on
 set relativenumber
 set number
 set hlsearch
 set incsearch
 set ruler
 set showmatch
-
 set laststatus=2
-
 set tabstop=4
 set shiftwidth=4
-
 set expandtab
 set smarttab
 set smartindent
-
+set showcmd
 
 set vb
 set t_vb=
 
-set background=dark
-colorscheme molokai
 set dictionary=/usr/share/dict/words
-
 au BufWritePost,BufEnter * Neomake
-
 
 "the unicode signs look awful, sorry
 let g:neomake_error_sign = { 'text' : 'E' }
