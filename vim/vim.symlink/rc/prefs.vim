@@ -20,13 +20,13 @@ set vb
 set t_vb=
 
 set dictionary=/usr/share/dict/words
-au BufWritePost,BufEnter * Neomake
-
-"the unicode signs look awful, sorry
-let g:neomake_error_sign = { 'text' : 'E' }
-let g:neomake_warning_sign = { 'text' : 'W' }
-let g:neomake_message_sign = { 'text' : 'M' }
-let g:neomake_informational_sign = { 'text' : 'i' }
+" au BufWritePost,BufEnter * Neomake
+" 
+" "the unicode signs look awful, sorry
+" let g:neomake_error_sign = { 'text' : 'E' }
+" let g:neomake_warning_sign = { 'text' : 'W' }
+" let g:neomake_message_sign = { 'text' : 'M' }
+" let g:neomake_informational_sign = { 'text' : 'i' }
 
 let g:rainbow_active = 1
 let g:rainbow_conf = {
