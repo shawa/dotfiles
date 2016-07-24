@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[ -z "$1" ] && exit 1
+
+shuf /usr/share/dict/words | head -n "$1" | tr '\n' '-' | sed 's/-$//'
+echo
