@@ -1,4 +1,5 @@
 source ~/.vim/rc/prefs.vim
+source ~/.vim/rc/airline.vim
 source ~/.vim/rc/bindings.vim
 source ~/.vim/rc/functions.vim
 source ~/.vim/rc/plugins.vim
@@ -10,9 +11,3 @@ source ~/.vim/rc/plugins.vim
 "             (__)\       )\/\
 "                 ||----w |
 "                 ||     ||
-
-" Things to make vim better
-" [ ] Yank and Put that works nicely
-" [ ] Vi mode for : and /
-" [ ] / autocomplete?
-
