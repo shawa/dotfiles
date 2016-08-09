@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 "Plug 'benekastah/neomake'
-"Plug 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow'
+Plug 'othree/yajs.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'klen/python-mode'
 Plug 'scrooloose/syntastic'
