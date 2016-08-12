@@ -29,4 +29,7 @@ let g:pymode_lint_ignore = "E0602,F821"
 
 let g:syntastic_javascript_checkers = ['eslint']
 
+let g:goyo_width = 90
 set completeopt=menu
+
+set printfont="Fira Code"
