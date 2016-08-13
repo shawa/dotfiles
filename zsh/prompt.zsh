@@ -43,6 +43,14 @@ need_push () {
   fi
 }
 
+pyvenv_active() {
+    if [ -n "$VIRTUAL_ENV" ]
+    then
+        local envdir="$(echo $VIRTUAL_ENV | awk -F '/' '{print $(NF-1)}')"
+        echo %{$fg_bold[cyan]%}$envdir%{$reset_color%}
+    fi
+}
+
 user_name() {
     echo "%n@%M% "
 }
@@ -53,7 +61,7 @@ directory_name() {
 
 
 set_prompt () {
-    export PROMPT=$'\n$(directory_name)$(git_dirty)$(need_push)\n› '
+    export PROMPT=$'\n$(directory_name)$(git_dirty)$(need_push)$(pyvenv_active)\n› '
     export RPROMPT="%*"
 }
 
