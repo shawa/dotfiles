@@ -1,3 +1,6 @@
 export EDITOR='vim'
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+
+function _nvm () {
+    . "/usr/local/opt/nvm/nvm.sh"
+}
