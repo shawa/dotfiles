@@ -13,5 +13,7 @@ nmap <leader>} :tabn<cr>
 nmap <leader>+ :tabnew<cr>
 nmap <leader>_ :tabc<cr>
 
+nmap <leader>g :Goyo<cr>
 nmap <leader><space> :StripWhitespace<cr>
+
 nnoremap \ :NERDTreeToggle<cr>

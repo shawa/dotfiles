@@ -49,3 +49,6 @@ then
     alias pbcopy='xsel --clipboard --input'
     alias pbpaste='xsel --clipboard --output'
 fi
+
+alias vim='nvim'
+alias vi='nvim'

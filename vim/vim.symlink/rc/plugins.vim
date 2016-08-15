@@ -1,20 +1,18 @@
 call plug#begin('~/.vim/plugged')
-"Plug 'benekastah/neomake'
-Plug 'luochen1990/rainbow'
-Plug 'othree/yajs.vim'
+" Appearance
 Plug 'vim-airline/vim-airline'
-Plug 'klen/python-mode'
-Plug 'scrooloose/syntastic'
-Plug 'junegunn/goyo.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/SyntaxRange'
-Plug 'vim-scripts/brainfuck-syntax'
-Plug 'wting/rust.vim'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+
+" Editing/UI
 Plug 'airblade/vim-gitgutter'
-Plug 'fxn/vim-monochrome'
-Plug 'robertmeta/nofrils'
+Plug 'benekastah/neomake'
+Plug 'junegunn/goyo.vim'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'scrooloose/nerdtree'
+
+" Langs
 Plug 'elixir-lang/vim-elixir'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
