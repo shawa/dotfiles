@@ -25,8 +25,8 @@ set completeopt=menu
 let g:goyo_width = 90
 let g:airline_theme = 'bubblegum'
 
-autocmd! BufWritePost,BufEnter * Neomake
 autocmd! BufWritePost,BufEnter * :StripWhitespace
+autocmd! BufWritePost,BufEnter * Neomake
 
 augroup mine
     au BufWinEnter * sign define mysign

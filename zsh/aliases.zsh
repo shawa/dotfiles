@@ -16,7 +16,7 @@ then
   alias la="gls --color -A"
 fi
 
-rm(){ srm $@ & }
+# rm(){ srm $@ & }
 
 remote() {
     [ -z "$1" ] && return

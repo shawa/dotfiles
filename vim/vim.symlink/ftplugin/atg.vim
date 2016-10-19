@@ -18,3 +18,10 @@ hi link atgChar String
 hi link atgComment Comment
 hi link atgDirective Preproc
 hi link atgOperator Preproc
+
+set autoindent
+set smartindent
+set smarttab
+set tabstop=2
+set expandtab
+set shiftwidth=2

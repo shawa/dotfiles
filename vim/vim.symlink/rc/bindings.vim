@@ -16,4 +16,6 @@ nmap <leader>_ :tabc<cr>
 nmap <leader>g :Goyo<cr>
 nmap <leader><space> :StripWhitespace<cr>
 
+vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
 nnoremap \ :NERDTreeToggle<cr>
