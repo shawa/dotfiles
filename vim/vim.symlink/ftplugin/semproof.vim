@@ -2,6 +2,9 @@ imap and      ∧
 imap or       ∨
 imap not      ¬
 
+imap forall   ∀
+imap exists   ∃
+
 imap ===      ≣
 
 imap implies  →
@@ -68,3 +71,4 @@ imap omega    ω
 set ts=8
 set sw=8
 set expandtab
+set norelativenumber

@@ -23,7 +23,7 @@ Plug 'junegunn/goyo.vim'                    " zen mode
 
 " Langs
 Plug 'mlr-msft/vim-loves-dafny'             " dafny
-Plug 'elixir-lang/vim-elixir'               " elixir
+" Plug 'elixir-lang/vim-elixir'               " elixir
 Plug 'pangloss/vim-javascript'              " better jay ess
 Plug 'plasticboy/vim-markdown'              " markdown
 Plug 'aklt/plantuml-syntax'                 " uml, yeh
