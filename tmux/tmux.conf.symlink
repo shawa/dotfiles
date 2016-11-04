@@ -20,6 +20,7 @@ bind | split-window -h -c "#{pane_current_path}"
 # copy mode
 bind \ copy-mode
 bind p paste-buffer
+bind o set -g status
 bind -t vi-copy v begin-selection
 bind -t vi-copy y copy-selection
 bind -t vi-copy Escape cancel

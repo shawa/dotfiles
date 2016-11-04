@@ -15,6 +15,7 @@ imap <-       ←
 
 imap entails  ⊨
 imap derives  ⊢
+imap sevired  ⊣
 
 imap bottom   ⊥
 imap top      ⊤
