@@ -2,8 +2,10 @@ imap and      ∧
 imap or       ∨
 imap not      ¬
 
+imap A        ∀
 imap forall   ∀
 imap exists   ∃
+imap E        ∃
 
 imap ===      ≣
 
@@ -69,7 +71,7 @@ imap psi      ψ
 imap Omega    Ω
 imap omega    ω
 
-set ts=8
-set sw=8
+set ts=4
+set sw=4
 set expandtab
 set norelativenumber

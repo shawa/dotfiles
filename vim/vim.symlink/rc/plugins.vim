@@ -15,6 +15,7 @@ Plug 'benekastah/neomake'                   " async job control
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') } " async completion
 Plug 'vim-scripts/marvim'                   " persistent macro storage
 Plug 'junegunn/vim-easy-align'              " nice table alignment
+Plug 'luochen1990/rainbow'
 
 " UI
 Plug 'scrooloose/nerdtree'                  " nicer file explorer

@@ -6,6 +6,10 @@ nmap <leader>] :bn<cr>
 nmap <leader>- :bd<cr>
 nmap <leader>= :ls<cr>
 
+
+nmap <leader>fs 1z=
+nmap <leader>ls zg
+
 nmap <leader>/ :noh<cr>
 "tabs
 nmap <leader>{ :tabp<cr>

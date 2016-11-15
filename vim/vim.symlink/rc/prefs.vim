@@ -33,3 +33,4 @@ augroup mine
     au BufWinEnter * exe "sign place 1337 line=1 name=mysign buffer=" . bufnr('%')
 augroup END
 
+let g:rainbow_active = 1

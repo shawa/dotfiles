@@ -62,7 +62,7 @@ directory_name() {
 
 set_prompt () {
     export PROMPT=$'\n$(directory_name)$(git_dirty)$(need_push)$(pyvenv_active)\n› '
-    export RPROMPT="%*"
+    export RPROMPT="$(user_name) %*"
 }
 
 precmd() {
