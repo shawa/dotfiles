@@ -16,6 +16,7 @@ then
   alias la="gls --color -A"
 fi
 
+alias org='open -a emacs ~/Documents/college/SS/general/plan.org'
 # rm(){ srm $@ & }
 
 remote() {
