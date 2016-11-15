@@ -22,9 +22,6 @@ do
 #  date +%s%N
 done
 
-#autoload -U compinit
-#compinit
-
 unset config_files
 
 # Nice coloring
@@ -34,5 +31,15 @@ then
 fi
 
 source '/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' 2> /dev/null
+
+autoload -U compinit
+compinit
+
+# load every completion after autocomplete loads
+for file in ${(M)config_files:#*/completion.zsh}
+do
+  source $file
+done
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
