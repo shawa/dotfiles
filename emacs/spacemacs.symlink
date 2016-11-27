@@ -330,6 +330,7 @@ you should place your code here."
                   js-indent-level 2)
 
 
+    (setq org-startup-indented t)
     (setq flycheck-dafny-executable "/Users/shawa/bin/dafny")
     (setq flycheck-pos-tip-timeout 300)
     (setq puml-plantuml-jar-path "/usr/local/Cellar/plantuml/8046/plantuml.8046.jar")
