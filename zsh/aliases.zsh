@@ -44,6 +44,14 @@ mkcd() {
     cd -P -- "$1"
 }
 
+pname () {
+    tr '[:upper:]' '[:lower:]' \
+        | tr '\n' ' ' \
+        | tr -cd '[0-9a-z] ' \
+        | tr ' ' '-'
+}
+
+
 if [ $(uname) = 'Linux' ];
 then
     alias ls='ls --color=auto'
@@ -53,3 +61,4 @@ fi
 
 alias vim='nvim'
 alias vi='nvim'
+alias em="emacsclient"

@@ -5,6 +5,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$ZSH/bin:./bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/gowork/bin/"
 export PATH="$PATH:$HOME/.local/bin"
-
+export PATH="$PATH:$HOME/.stack/programs/x86_64-osx/ghc-8.0.1/bin"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"

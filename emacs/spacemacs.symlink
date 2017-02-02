@@ -11,6 +11,7 @@ values."
    ;; `+distribution'. For now available distributions are `spacemacs-base'
    ;; or `spacemacs'. (default 'spacemacs)
    dotspacemacs-distribution 'spacemacs
+
    ;; Lazy installation of layers (i.e. layers are installed only when a file
    ;; with a supported type is opened). Possible values are `all', `unused'
    ;; and `nil'. `unused' will lazy install only unused layers (i.e. layers
@@ -31,30 +32,25 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
+     (haskell :variables
+              haskell-completion-backend 'intero)
+     javascript
      helm
-     auto-completion
      better-defaults
-
+     restclient
      git
      emacs-lisp
      org
 
      (markdown :variables markdown-live-preview-engine 'vmd)
-
      plantuml
      html
      csv
      yaml
-
      elixir
      python
+     scala
      c-c++
-     (haskell :variables haskell-completion-backend 'intero)
      imenu-list
      nlinum
 
@@ -65,10 +61,10 @@ values."
      spell-checking
      syntax-checking
 
+
      (version-control :variables
             version-control-diff-tool 'diff-hl
             version-control-global-margin t)
-
      osx
      )
    ;; List of additional packages that will be installed without being
@@ -77,6 +73,8 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
       boogie-friends
+      helm-spotify
+      fireplace
    )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -149,7 +147,9 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(
+                         dracula
+                         spacemacs-dark
                          monokai
                          molokai
                          spacemacs-light)
@@ -268,7 +268,7 @@ values."
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
@@ -324,26 +324,57 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (mac-auto-operator-composition-mode)
   (highlight-indentation-mode)
+
+  (add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++14")))
+  (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++14")))
+  (setq dafny-prover-alternate-args '("/proverWarnings:2" "/traceverify" "/z3opt:TRACE=true" "/trace" "/traceTimes" "/tracePOs"))
+  (setq diff-hl-side 'left)
+  (setq flycheck-dafny-executable "/Users/shawa/bin/dafny")
+  (setq flycheck-pos-tip-timeout 300)
+
+  (setq org-startup-indented t)
+  (setq org-plantuml-jar-path "/usr/local/Cellar/plantuml/8048/plantuml.8048.jar")
+  (setq puml-plantuml-jar-path "/usr/local/Cellar/plantuml/8048/plantuml.8048.jar")
+
+  (setq vc-follow-symlinks t)
+
+  (setq-default git-magit-status-fullscreen t)
+  (setq-default js2-basic-offset 2 js-indent-level 2)
+
+  (setq mac-mouse-wheel-smooth-scroll t)
+  (setq mouse-wheel-scroll-amount '(3 ((shift) . 1)))
+  (setq mouse-wheel-progressive-speed nil)
+
   (spacemacs/toggle-mode-line-battery-on)
-    (setq-default git-magit-status-fullscreen t)
-    (setq-default js2-basic-offset 2
-                  js-indent-level 2)
+  (defun pretty-lambdas-haskell ()
+  (font-lock-add-keywords
+    nil `((,(concat "\\(" (regexp-quote "\\") "\\)")
+            (0 (progn (compose-region (match-beginning 1) (match-end 1)
+                                      ,(make-char 'greek-iso8859-7 107))
+                      nil))))))
 
+  (add-hook 'haskell-mode-hook 'pretty-lambdas-haskell)
+  (require 'ob-shell)
+  (require 'ob-python)
+  (require 'ob-plantuml)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((shell . t)
+     (python . t)
+     (plantuml . t)
+    )
+   )
 
-    (setq org-startup-indented t)
-    (setq flycheck-dafny-executable "/Users/shawa/bin/dafny")
-    (setq flycheck-pos-tip-timeout 300)
-    (setq puml-plantuml-jar-path "/usr/local/Cellar/plantuml/8046/plantuml.8046.jar")
-    (add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++14")))
-    (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++14")))
-    (defun pretty-lambdas-haskell ()
-    (font-lock-add-keywords
-      nil `((,(concat "\\(" (regexp-quote "\\") "\\)")
-              (0 (progn (compose-region (match-beginning 1) (match-end 1)
-                                        ,(make-char 'greek-iso8859-7 107))
-                        nil))))))
+  (setq org-todo-keywords
+        '((sequence "NEXT" "TODO" "WAITING" "DONE")))
 
-    (add-hook 'haskell-mode-hook 'pretty-lambdas-haskell)
+  (setq org-todo-keyword-faces
+        '(("TODO" . org-warning) ("STARTED" . "yellow")
+          ("CANCELED" . (:foreground "blue" :weight bold))))
+  (setf org-todo-keyword-faces '(("NEXT"    . (:foreground "yellow" :background "orange"       :bold t :weight bold))
+                                 ("TODO"    . (:foreground "cyan"   :background "steelblue" :bold t :weight bold))
+                                 ("WAITING" . (:foreground "magenta2" :background "rebeccapurple"  :bold t :weight bold))
+                                 ("DONE"    . (:foreground "gray50" :background "gray30"))))
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -371,7 +402,7 @@ you should place your code here."
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (vmd-mode nlinum-relative nlinum imenu-list monokai-theme molokai-theme pug-mode plantuml-mode pcache ob-elixir hide-comnt yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic yaml-mode disaster company-c-headers cmake-mode clang-format puml-mode flycheck-mix csv-mode alchemist elixir-mode web-mode tagedit slim-mode scss-mode sass-mode less-css-mode jade-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data boogie-friends xterm-color smeargle shell-pop reveal-in-osx-finder pbcopy osx-trash osx-dictionary orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow launchctl intero htmlize hlint-refactor hindent helm-hoogle helm-gitignore helm-company helm-c-yasnippet haskell-snippets gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company-ghci company-ghc ghc haskell-mode company-cabal company cmm-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+    (noflet ensime sbt-mode scala-mode fireplace dracula-theme helm-spotify multi web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode tide typescript-mode ob-http vmd-mode nlinum-relative nlinum imenu-list monokai-theme molokai-theme pug-mode plantuml-mode pcache ob-elixir hide-comnt yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic yaml-mode disaster company-c-headers cmake-mode clang-format puml-mode flycheck-mix csv-mode alchemist elixir-mode web-mode tagedit slim-mode scss-mode sass-mode less-css-mode jade-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data boogie-friends xterm-color smeargle shell-pop reveal-in-osx-finder pbcopy osx-trash osx-dictionary orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow launchctl intero htmlize hlint-refactor hindent helm-hoogle helm-gitignore helm-company helm-c-yasnippet haskell-snippets gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck-haskell flycheck evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company-ghci company-ghc ghc haskell-mode company-cabal company cmm-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
