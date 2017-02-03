@@ -46,3 +46,17 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
+
+export HOSTCOLOUR=$(hostname | sha1sum | awk '
+BEGIN {
+    colors[0] = "red"
+    colors[1] = "green"
+	colors[2] = "blue"
+	colors[3] = "cyan"
+	colors[4] = "yellow"
+	colors[5] = "magenta"
+}
+{
+	print colors[$1 % 5]
+}
+EOF')

@@ -52,7 +52,7 @@ pyvenv_active() {
 }
 
 user_name() {
-    echo "%n@%M% "
+    echo "%n@%{$fg_bold[$HOSTCOLOUR]%}%M%{$reset_color%}%"
 }
 
 directory_name() {
