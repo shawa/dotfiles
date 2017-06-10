@@ -1,0 +1,9 @@
+[main]
+less_chatty = true
+vi = true
+syntax_style = monokai
+table_format = simple
+keyword_casing = upper
+
+[colors]
+Token.Output.OddRow = "bg:#555555"

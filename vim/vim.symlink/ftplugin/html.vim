@@ -1,1 +1,0 @@
-set formatprg=html-beautify

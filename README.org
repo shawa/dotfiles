@@ -1,0 +1,27 @@
+* Dotfiles III
+
+/Organised, even more, at last/
+
+This is my third attempt at a Dotfiles repo and hopefully the /last/.
+
+Config files are broken out in to [[https://www.gnu.org/software/stow/][GNU Stow]] packages corresponding to the program at hand.
+
+To "install" (symlink) a package, =cd= to =.dotfiles= and just run:
+
+#+BEGIN_SRC
+$ stow install <package name>
+#+END_SRC
+
+Uninstall with
+
+#+BEGIN_SRC 
+$ stow -D <package name>
+#+END_SRC
+
+You can have it print out what changes are going to happen with the =-v= flag.
+
+#+BEGIN_QUOTE
+/If you need a script to "install" your dotfiles, you're doing it wrong.''
+#+END_QUOTE
+
+Well Mr., if loose coupling and modularity is wrong, heck, I don't want to be /right/.
