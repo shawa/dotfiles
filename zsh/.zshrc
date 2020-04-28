@@ -1,8 +1,6 @@
 source $ZPLUG_HOME/init.zsh
 
-zplug "cswl/zsh-rbenv"
 zplug "kiurchv/asdf.plugin.zsh", defer:2
-zplug "lukechilds/zsh-nvm"
 zplug "mafredri/zsh-async", from:github
 zplug "modules/completion", from:prezto
 zplug "plugins/autojump", from:oh-my-zsh

@@ -2,6 +2,7 @@ pgcli/.config/pgcli/history
 pgcli/.config/pgcli/log
 
 nvim/.config/nvim/plugged
+nvim/.config/nvim/autoload
 nvim/.config/nvim/.netrwhist
 nvim/.config/htop
 nvim/.config/configstore
